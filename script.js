@@ -32,6 +32,11 @@ function gen() {
 }
 
 let reset = document.createElement('button');
-reset.innerText = "new button?";
+reset.innerText = "new board?";
 reset.addEventListener("click", gen);
 document.body.appendChild(reset);
+
+let roll = document.createElement('button');
+reset.innerText = "roll";
+reset.addEventListener("click", gen);
+document.body.appendChild(roll);
