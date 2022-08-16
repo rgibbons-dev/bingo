@@ -16,7 +16,8 @@ function col(min, max) {
 
 const bcol = col(1,15);
 const icol = col(16,30);
-const ncol = col(31,45);
+let ntemp = col(31,45);
+const ncol = ntemp.splice(3,1, "FREE")
 const gcol = col(46,60);
 const ocol = col(61,75);
 
