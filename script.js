@@ -21,3 +21,5 @@ function gen() {
     let gcol = col(46,60);
     let ocol = col(61,75);
 }
+
+document.body.innerHTML = "<h1>test item: " + bcol[1] + "</h1>" 
