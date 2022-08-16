@@ -4,11 +4,23 @@
         <title>bingo</title>
         <link href="style.css" rel="stylesheet" type="text/css">
         <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+        <script type="text/hyperscript">
+            set bset to [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+            set iset to [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+            set nset to [31,32,33,34,35,36,37,38,39,40,41,42,43,44,45]
+            set gset to [46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
+            set oset to [61,62,63,64,65,66,67,68,69,70,71,72,73,74,75]
+            set template to [0,0,0,0,0]
+            def genrow(arr)
+                set ret to template
+                repeat 5 times index j
+                    set random in arr to ret[j]
+                end
+            end
+        </script>
     </head>
     <body>
         <div id="board"></div>
-        <button _="on click toggle .big-text">
-            Toggle the "big-text" class on me on click
-        </button>
+        <p>hello</p>
     </body>
 </html>
