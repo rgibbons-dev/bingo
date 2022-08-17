@@ -28,7 +28,12 @@ function gen() {
     let col3 = "<div class=\"cell\">" + bcol[3] + "</div> <div class=\"cell\">" + icol[3] + "</div> <div class=\"cell\">" + ncol[3] + "</div> <div class=\"cell\">" + gcol[3] + "</div> <div class=\"cell\">" + ocol[3] + "</div>";
     let col4 = "<div class=\"cell\">" + bcol[4] + "</div> <div class=\"cell\">" + icol[4] + "</div> <div class=\"cell\">" + ncol[4] + "</div> <div class=\"cell\">" + gcol[4] + "</div> <div class=\"cell\">" + ocol[4] + "</div>";
 
-    document.body.innerHTML = "<div id=\"grid-col\">" + header + col0 + col1 + col2 + col3 + col4 + "</div>"
+    let inner = header + col0 + col1 + col2 + col3 + col4;
+
+    let grid = document.createElement("div");
+    grid.setAttribute("id", "grid-col");
+    grid.innerHTML = header;
+    document.appendChild(grid);
 }
 
 let chosen = new Array();
