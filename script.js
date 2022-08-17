@@ -31,12 +31,27 @@ function gen() {
     document.body.innerHTML = "<div id=\"grid-col\">" + header + col0 + col1 + col2 + col3 + col4 + "</div>"
 }
 
+let chosen = new Array();
+
 let reset = document.createElement('button');
 reset.innerText = "new board?";
-reset.addEventListener("click", gen);
+reset.addEventListener("click", function (event) {
+    gen();
+    chosen = new Array();
+});
 document.body.appendChild(reset);
 
 let roll = document.createElement('button');
-reset.innerText = "roll";
-reset.addEventListener("click", gen);
+roll.innerText = "roll";
+roll.addEventListener("click", function (event) {
+    if (chosen.length === 75) { return; }
+    let ball = random(1,75);
+    while (chosen.includes(ball)) {
+        ball = random(1,75);
+    }
+    chosen.push(ball);
+    let num = document.createElement("p");
+    num.innerText(ball);
+    document.body.appendChild(num)
+});
 document.body.appendChild(roll);
