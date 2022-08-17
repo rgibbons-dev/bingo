@@ -33,7 +33,7 @@ function gen() {
 
     let grid = document.createElement("div");
     grid.setAttribute("id", "grid-col");
-    grid.innerHTML = header;
+    grid.innerHTML = inner;
     document.body.appendChild(grid);
 }
 
