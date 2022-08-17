@@ -34,7 +34,7 @@ function gen() {
     let grid = document.createElement("div");
     grid.setAttribute("id", "grid-col");
     grid.innerHTML = header;
-    document.appendChild(grid);
+    document.body.appendChild(grid);
 }
 
 let chosen = new Array();
