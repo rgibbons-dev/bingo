@@ -56,7 +56,7 @@ roll.addEventListener("click", function (event) {
     }
     chosen.push(ball);
     let num = document.createElement("p");
-    num.innerText(ball);
+    num.innerText = ball;
     document.body.appendChild(num)
 });
 document.body.appendChild(roll);
