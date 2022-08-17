@@ -12,6 +12,7 @@ function col(min, max) {
             arr.push(pick);
         }
     }
+    return arr;
 }
 
 function gen() {
